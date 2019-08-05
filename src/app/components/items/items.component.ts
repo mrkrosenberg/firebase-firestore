@@ -10,9 +10,14 @@ import { ItemService } from '../../services/item.service';
 })
 export class ItemsComponent implements OnInit {
 
-  constructor(public itemService: ItemService) { }
+  constructor(private itemService: ItemService) { }
 
   ngOnInit() {
+
+    this.itemService.getItems().subscribe(items => {
+      console.log(items);
+    })
+
   }
 
 }
