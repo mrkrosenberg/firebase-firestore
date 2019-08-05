@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {  Observable } from 'rxjs';
 
 // Firestore
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
@@ -12,6 +13,8 @@ import { Item } from '../models/item';
 export class ItemService {
 
   itemsCollection: AngularFirestoreCollection<Item>;
+
+  items: Observable<Item[]>;
 
   constructor(public firestore: AngularFirestore) { }
 }
