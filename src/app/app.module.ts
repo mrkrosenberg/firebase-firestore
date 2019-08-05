@@ -9,10 +9,12 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { firebaseConfig } from '../environments/env-variables';
 
 import { AppComponent } from './app.component';
+import { ItemsComponent } from './components/items/items.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ItemsComponent
   ],
   imports: [
     BrowserModule,
