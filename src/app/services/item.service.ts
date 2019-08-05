@@ -16,5 +16,15 @@ export class ItemService {
 
   items: Observable<Item[]>;
 
-  constructor(public firestore: AngularFirestore) { }
+  constructor(public firestore: AngularFirestore) { 
+
+    this.items = this.firestore.collection('items').valueChanges();
+
+  }
+
+
+  getItems() {
+    return this.items;
+  }
+
 }
