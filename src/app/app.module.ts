@@ -8,6 +8,9 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 // Env Variables
 import { firebaseConfig } from '../environments/env-variables';
 
+// Services
+import { ItemService } from './services/item.service';
+
 import { AppComponent } from './app.component';
 import { ItemsComponent } from './components/items/items.component';
 
@@ -21,7 +24,9 @@ import { ItemsComponent } from './components/items/items.component';
     AngularFireModule.initializeApp(firebaseConfig, 'fs1'),
     AngularFirestoreModule
   ],
-  providers: [],
+  providers: [
+    ItemService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
